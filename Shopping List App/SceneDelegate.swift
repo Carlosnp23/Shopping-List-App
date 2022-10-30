@@ -3,7 +3,13 @@
 //  Shopping List App
 //
 //  Created by Carlos Norambuena on 2022-10-29.
-//
+
+//  File name: CalculatorApp
+//  Author's name: Carlos Norambuena Perez
+//  Student ID: 301265667
+//  Date: 2022-10-29
+//  App Description: Shopping List App (Mid-Term Test)
+//  Version of Xcode: Version 14.0.1 (14A400)
 
 import UIKit
 
