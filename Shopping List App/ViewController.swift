@@ -14,12 +14,30 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func TxtListName(_ sender: UITextField) {
+    
+    @IBOutlet weak var TxtListName: UITextField!
+    
+    @IBAction func BtnCancel(_ sender: UIButton) {
+        TxtListName.text = "Enter List Name"
+        TxtSugar.text = "0"
+        TxtSalt.text = "0"
+        TxtRice.text = "0"
+        TxtMilk.text = "0"
+        TxtCheese.text = "0"
+        TxtEggs.text = "0"
+        TxtOil.text = "0"
+        self.Sugar_Stepper.value = 0
+        self.Salt_Stepper.value = 0
+        self.Rice_Stepper.value = 0
+        self.Milk_Stepper.value = 0
+        self.Cheese_Stepper.value = 0
+        self.Eggs_Stepper.value = 0
+        self.Oil_Stepper.value = 0
+        
     }
     
+    
     //Text Field Quantity
-    
-    
     @IBOutlet weak var TxtSugar: UITextField!
     @IBOutlet weak var TxtSalt: UITextField!
     @IBOutlet weak var TxtRice: UITextField!
@@ -28,6 +46,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var TxtEggs: UITextField!
     @IBOutlet weak var TxtOil: UITextField!
     
+    //To reset the Stepper
+    @IBOutlet weak var Sugar_Stepper: UIStepper!
+    @IBOutlet weak var Salt_Stepper: UIStepper!
+    @IBOutlet weak var Rice_Stepper: UIStepper!
+    @IBOutlet weak var Milk_Stepper: UIStepper!
+    @IBOutlet weak var Cheese_Stepper: UIStepper!
+    @IBOutlet weak var Eggs_Stepper: UIStepper!
+    @IBOutlet weak var Oil_Stepper: UIStepper!
     
     
     //Quantity of items
@@ -39,33 +65,37 @@ class ViewController: UIViewController {
     
     @IBAction func Salt_Stepper(_ sender: UIStepper) {
         
+        self.TxtSalt.text = Int(sender.value).description
         
     }
     
     @IBAction func Rice_Stepper(_ sender: UIStepper) {
         
+        self.TxtRice.text = Int(sender.value).description
         
     }
     
     @IBAction func Milk_Stepper(_ sender: UIStepper) {
         
+        self.TxtMilk.text = Int(sender.value).description
         
     }
-    
     
     @IBAction func Cheese_Stepper(_ sender: UIStepper) {
         
+        self.TxtCheese.text = Int(sender.value).description
         
     }
     
-    
     @IBAction func Eggs_Stepper(_ sender: UIStepper) {
         
+        self.TxtEggs.text = Int(sender.value).description
         
     }
     
     @IBAction func Oil_Stepper(_ sender: UIStepper) {
         
+        self.TxtOil.text = Int(sender.value).description
         
     }
 
