@@ -24,24 +24,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var TxtListName: UITextField!
     
     @IBAction func BtnCancel(_ sender: UIButton) {
-        TxtListName.text = "Enter List Name"
-        TxtSugar.text = "0"
-        TxtSalt.text = "0"
-        TxtRice.text = "0"
-        TxtMilk.text = "0"
-        TxtCheese.text = "0"
-        TxtEggs.text = "0"
-        TxtOil.text = "0"
-        self.Sugar_Stepper.value = 0
-        self.Salt_Stepper.value = 0
-        self.Rice_Stepper.value = 0
-        self.Milk_Stepper.value = 0
-        self.Cheese_Stepper.value = 0
-        self.Eggs_Stepper.value = 0
-        self.Oil_Stepper.value = 0
+        
+        //Alert to proceed
+        let alert = UIAlertController(title: "Alert", message: "Are you sure you want to cancel?", preferredStyle: .alert)
+        
+        //Reset all
+        alert.addAction(UIAlertAction(title: "Accept", style: .destructive, handler: {_ in
+            self.TxtListName.text = "Enter List Name"
+            self.TxtSugar.text = "0"
+            self.TxtSalt.text = "0"
+            self.TxtRice.text = "0"
+            self.TxtMilk.text = "0"
+            self.TxtCheese.text = "0"
+            self.TxtEggs.text = "0"
+            self.TxtOil.text = "0"
+            self.Sugar_Stepper.value = 0
+            self.Salt_Stepper.value = 0
+            self.Rice_Stepper.value = 0
+            self.Milk_Stepper.value = 0
+            self.Cheese_Stepper.value = 0
+            self.Eggs_Stepper.value = 0
+            self.Oil_Stepper.value = 0
+        }))
+        
+        //Cancel
+        alert.addAction(UIAlertAction(title: "Cancek", style: .cancel))
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
-    
     
     @IBAction func BtnSave(_ sender: UIButton) {
     }
